@@ -1,11 +1,12 @@
 package org.example.guilhermezuriel.camadasaplicacao.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table
+@Table(name="tb_user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String password;
