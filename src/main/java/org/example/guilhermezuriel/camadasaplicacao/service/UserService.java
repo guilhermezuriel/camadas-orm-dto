@@ -14,9 +14,9 @@ public class UserService {
 
     @Autowired
     private UserRepository repository;
-    public User findById(Long id){
+    public UserDTO findById(Long id){
         User entity = repository.findById(id).get();
-        return entity;
+        return new UserDTO(entity);
     }
 
 }

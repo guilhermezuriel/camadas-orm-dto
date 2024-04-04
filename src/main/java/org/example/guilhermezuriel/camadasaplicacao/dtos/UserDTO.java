@@ -1,10 +1,11 @@
 package org.example.guilhermezuriel.camadasaplicacao.dtos;
 
 
+import lombok.Getter;
 import org.example.guilhermezuriel.camadasaplicacao.entities.User;
 
-import java.util.Optional;
 
+@Getter
 public class UserDTO {
     private Long id;
     private String name;
@@ -18,4 +19,5 @@ public class UserDTO {
         id = user.getId();
         name = user.getName();
     }
+
 }
